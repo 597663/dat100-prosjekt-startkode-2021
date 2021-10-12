@@ -4,7 +4,7 @@ import no.hvl.dat100.prosjekt.TODO;
 import no.hvl.dat100.prosjekt.kontroll.dommer.Regler;
 
 // Ser du dette Olav?
-
+//Ja
 //Test
 
 
