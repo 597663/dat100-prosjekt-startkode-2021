@@ -5,6 +5,8 @@ import no.hvl.dat100.prosjekt.modell.KortUtils;
 import no.hvl.dat100.prosjekt.TODO;
 import no.hvl.dat100.prosjekt.modell.Kort;
 
+// Hvis du ser dette betyr det at jeg greide å push det opp... Hilsen Petter
+
 /**
  * Klasse som implementerer bordet som spilles på. 
  * 
