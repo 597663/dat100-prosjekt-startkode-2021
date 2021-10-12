@@ -5,6 +5,8 @@ import no.hvl.dat100.prosjekt.kontroll.dommer.Regler;
 
 // Ser du dette Olav?
 
+//Test
+
 
 /**
  * Struktur for å lagre ei samling kort. Kan lagre hele kortstokken. Det finnes
