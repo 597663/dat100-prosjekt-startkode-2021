@@ -81,7 +81,7 @@ public class KortSamling {
 			samling[i+Regler.MAKS_KORT_FARGE] = new Kort(Kortfarge.Hjerter, i+1);
 			samling[i+2*Regler.MAKS_KORT_FARGE] = new Kort(Kortfarge.Ruter, i+1);
 			samling[i+3*Regler.MAKS_KORT_FARGE] = new Kort(Kortfarge.Spar, i+1);
-		}
+			}
 		}
 
 	/**
