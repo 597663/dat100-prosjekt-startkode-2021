@@ -105,10 +105,10 @@ public class KortSamling {
 	 */
 	public Kort seSiste() {
 		
-		
 		for(int i = samling.length-1; i >= 0 ; i--) {
-			
-			
+			if(samling[i] != null) {
+				return samling[i];
+			}
 			
 		}
 		
