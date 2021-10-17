@@ -1,6 +1,5 @@
 package no.hvl.dat100.prosjekt.modell;
 
-import no.hvl.dat100.prosjekt.TODO;
 import no.hvl.dat100.prosjekt.kontroll.dommer.Regler;
 
 public class KortSamling {
@@ -48,9 +47,10 @@ public class KortSamling {
 		for(int i = 0; i < samling.length; i++)
 			if(samling[i] == null) {
 				samling[i] = kort;
+				antall++;
 				return;
 		    }
-		antall++;
+		
 	}
 	
 	public void leggTilAlle() {
@@ -60,8 +60,8 @@ public class KortSamling {
 			samling[i+Regler.MAKS_KORT_FARGE] = new Kort(Kortfarge.Hjerter, i+1);
 			samling[i+2*Regler.MAKS_KORT_FARGE] = new Kort(Kortfarge.Ruter, i+1);
 			samling[i+3*Regler.MAKS_KORT_FARGE] = new Kort(Kortfarge.Spar, i+1);
-			antall = 52;
 			}
+		antall = 52;
 		}
 
 	public void fjernAlle() {
@@ -117,6 +117,7 @@ public class KortSamling {
 		for (int i = 0; i<samling.length; i++) {
 			if (samling[i] == kort) {
 				samling[i] = null;
+				antall--;
 				return true;
 			}
 		}
