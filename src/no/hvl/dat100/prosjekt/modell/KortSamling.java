@@ -48,10 +48,9 @@ public class KortSamling {
 		for(int i = 0; i < samling.length; i++)
 			if(samling[i] == null) {
 				samling[i] = kort;
-				antall++;
 				return;
 		    }
-	
+		antall++;
 	}
 	
 	public void leggTilAlle() {
