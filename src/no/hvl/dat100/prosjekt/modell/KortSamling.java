@@ -131,7 +131,7 @@ public class KortSamling {
 	public boolean har(Kort kort) {
 		
 		for (int i = 0; i<samling.length; i++) {
-			if (samling[i] = kort) {
+			if (samling[i] == kort) {
 				return true;
 			}
 		}
@@ -142,7 +142,7 @@ public class KortSamling {
 	public boolean fjern(Kort kort) {
 		
 		for (int i = 0; i<samling.length; i++) {
-			if (samling[i] = kort) {
+			if (samling[i] == kort) {
 				samling[i] = null;
 				return true;
 			}
@@ -157,6 +157,9 @@ public class KortSamling {
 	 *         som i kortsamlinga.
 	 */
 	public Kort[] getAllekort() {
+		
+		
+		
 		
 		// TODO - START
 		
