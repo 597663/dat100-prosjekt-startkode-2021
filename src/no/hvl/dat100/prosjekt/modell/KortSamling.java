@@ -176,7 +176,7 @@ public class KortSamling {
 				}
 		}
 				
-		Kort [] alleKort = new Kort[lengde];
+		final Kort [] alleKort = new Kort[lengde];
 		
 		int k = 0;
 		for (int j = 0; j<samling.length; j++) {
