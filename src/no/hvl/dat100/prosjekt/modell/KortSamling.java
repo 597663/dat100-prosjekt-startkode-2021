@@ -172,7 +172,8 @@ public class KortSamling {
 		int lengde = samling.length;
 		for (int i = 0; i<samling.length; i++) {
 			if(samling[i] != null) {
-				lengde = lengde - 1;
+				lengde = lengde - 1;}
+		}
 				
 		Kort [] alleKort = new Kort[lengde];
 		
@@ -182,11 +183,8 @@ public class KortSamling {
 				samling[j]=alleKort[k];
 				k++;
 		}
-		
-		
 		return alleKort;
-			}
-		
-		}
-	}
+	}	
 }
+
+
