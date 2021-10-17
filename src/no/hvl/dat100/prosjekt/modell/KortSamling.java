@@ -169,15 +169,24 @@ public class KortSamling {
 	 */
 	public Kort[] getAllekort() {
 		
+		int lengde = samling.length;
+		for (int i = 0; i<samling.length; i++) {
+			if(samling[i] != null) {
+				lengde = lengde - 1;
+				
+		Kort [] alleKort = new Kort[lengde];
+		
+		int k = 0;
+		for (int j = 0; j<samling.length; j++) {
+			if(samling[j] != null)
+				samling[j]=alleKort[k];
+				k++;
+		}
 		
 		
+		return alleKort;
+			}
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - END
-	
+		}
 	}
-	
 }
