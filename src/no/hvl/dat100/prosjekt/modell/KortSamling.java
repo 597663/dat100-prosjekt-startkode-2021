@@ -48,21 +48,24 @@ public class KortSamling {
 	
 	public boolean erTom() {
 		
-		boolean tom = true;
 		for (int i = 0; i<samling.length; i++) {
 			if (samling[i] != null) {
-				tom = false;
+				return false;
 			}
 		}
-		return tom;
+		return true;
 	}
 
 	public void leggTil(Kort kort) {
 		
-		for(int i = 0; i < samling.length; i++)
-		    if(samling[i] == null) {
-		        samling[i] = kort;
-		        break;
+		if(kort == null) {
+			return;
+		}
+		else
+			for(int i = 0; i < samling.length; i++)
+				if(samling[i] == null) {
+					samling[i] = kort;
+					return;
 		    }
 	
 	}
@@ -86,10 +89,10 @@ public class KortSamling {
 	 */
 	public void fjernAlle() {
 		
-		//for(int i = 0; i < samling.length; i++)
-		  //  samling[i] = null;
+//		for(int i = 0; i < samling.length; i++)
+//			samling[i] = null;
 	
-	
+		samling = new Kort[MAKS_KORT];
 		
 	
 	}
@@ -103,7 +106,11 @@ public class KortSamling {
 	public Kort seSiste() {
 		
 		
-		
+		for(int i = samling.length-1; i >= 0 ; i--) {
+			
+			
+			
+		}
 		
 		// TODO - START
 		
@@ -130,9 +137,13 @@ public class KortSamling {
 	
 	public boolean har(Kort kort) {
 		
-		for (int i = 0; i<samling.length; i++) {
-			if (samling[i] == kort) {
-				return true;
+		if(kort == null) {
+			return false;
+		}
+		else
+			for (int i = 0; i<samling.length; i++) {
+				if (samling[i] == kort) {
+					return true;
 			}
 		}
 		return false;
@@ -141,10 +152,14 @@ public class KortSamling {
 			 
 	public boolean fjern(Kort kort) {
 		
-		for (int i = 0; i<samling.length; i++) {
-			if (samling[i] == kort) {
-				samling[i] = null;
-				return true;
+		if(kort == null) {
+			return false;
+		}
+		else
+			for (int i = 0; i<samling.length; i++) {
+				if (samling[i] == kort) {
+					samling[i] = null;
+					return true;
 			}
 		}
 		return false;
