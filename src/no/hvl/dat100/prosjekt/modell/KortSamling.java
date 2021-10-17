@@ -61,11 +61,10 @@ public class KortSamling {
 		if(kort == null) {
 			return;
 		}
-		else
-			for(int i = 0; i < samling.length; i++)
-				if(samling[i] == null) {
-					samling[i] = kort;
-					return;
+		for(int i = 0; i < samling.length; i++)
+			if(samling[i] == null) {
+				samling[i] = kort;
+				return;
 		    }
 	
 	}
@@ -89,9 +88,6 @@ public class KortSamling {
 	 */
 	public void fjernAlle() {
 		
-//		for(int i = 0; i < samling.length; i++)
-//			samling[i] = null;
-	
 		samling = new Kort[MAKS_KORT];
 		
 	
@@ -136,10 +132,9 @@ public class KortSamling {
 		if(kort == null) {
 			return false;
 		}
-		else
-			for (int i = 0; i<samling.length; i++) {
-				if (samling[i] == kort) {
-					return true;
+		for (int i = 0; i<samling.length; i++) {
+			if (samling[i] == kort) {
+				return true;
 			}
 		}
 		return false;
@@ -151,11 +146,10 @@ public class KortSamling {
 		if(kort == null) {
 			return false;
 		}
-		else
-			for (int i = 0; i<samling.length; i++) {
-				if (samling[i] == kort) {
-					samling[i] = null;
-					return true;
+		for (int i = 0; i<samling.length; i++) {
+			if (samling[i] == kort) {
+				samling[i] = null;
+				return true;
 			}
 		}
 		return false;
