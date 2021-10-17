@@ -171,7 +171,7 @@ public class KortSamling {
 		
 		int lengde = samling.length;
 		for (int i = 0; i<samling.length; i++) {
-			if(samling[i] != null) {
+			if(samling[i] == null) {
 				lengde = lengde - 1;}
 		}
 				
