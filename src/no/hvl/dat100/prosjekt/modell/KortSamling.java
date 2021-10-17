@@ -125,13 +125,6 @@ public class KortSamling {
 	}
 
 	public Kort[] getAllekort() {
-		
-		int lengde = 0;
-		for (int i = 0; i<samling.length; i++) {
-			if(samling[i] != null) {
-				lengde++;
-				}
-		}
 				
 		final Kort [] alleKort = new Kort[antall];
 		
