@@ -169,10 +169,11 @@ public class KortSamling {
 	 */
 	public Kort[] getAllekort() {
 		
-		int lengde = samling.length;
+		int lengde = 0;
 		for (int i = 0; i<samling.length; i++) {
-			if(samling[i] == null) {
-				lengde = lengde - 1;}
+			if(samling[i] != null) {
+				lengde++;
+				}
 		}
 				
 		Kort [] alleKort = new Kort[lengde];
