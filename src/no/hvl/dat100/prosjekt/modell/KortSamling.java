@@ -108,8 +108,7 @@ public class KortSamling {
 		for(int i = samling.length-1; i >= 0 ; i--) {
 			if(samling[i] != null) {
 				return samling[i];
-			}
-			
+			}		
 		}
 		return null;
 	}
@@ -122,11 +121,14 @@ public class KortSamling {
 	 */
 	public Kort taSiste() {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		
-		// TODO - END
+		for(int i = samling.length-1; i >= 0 ; i--) {
+			if(samling[i] != null){
+				final Kort siste = samling[i];
+				samling[i] = null;
+				return samling[i];
+			}		
+		}
+		return null;
 	}
 	
 	public boolean har(Kort kort) {
