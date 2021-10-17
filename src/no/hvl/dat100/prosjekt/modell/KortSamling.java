@@ -55,6 +55,10 @@ public class KortSamling {
 			samling[i+2*Regler.MAKS_KORT_FARGE] = new Kort(Kortfarge.Ruter, i+1);
 			samling[i+3*Regler.MAKS_KORT_FARGE] = new Kort(Kortfarge.Spar, i+1);
 			}
+		
+		for(int j = 0 ; j < MAKS_KORT; j++) {
+			System.out.println(samling[j]);
+		}
 		antall = 52;
 		}
 
@@ -95,7 +99,7 @@ public class KortSamling {
 			return false;
 		}
 		for (int i = 0; i<samling.length; i++) {
-			if (samling[i] == kort) {
+			if (samling[i] != null && samling[i].equals(kort)) {
 				return true;
 			}
 		}
