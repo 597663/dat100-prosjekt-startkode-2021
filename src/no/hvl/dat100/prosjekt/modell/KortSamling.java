@@ -125,7 +125,7 @@ public class KortSamling {
 			if(samling[i] != null){
 				final Kort siste = samling[i];
 				samling[i] = null;
-				return samling[i];
+				return siste;
 			}		
 		}
 		return null;
