@@ -16,7 +16,6 @@ public class KortSamling {
 	private final int MAKS_KORT = 4 * Regler.MAKS_KORT_FARGE;
 
 	private Kort[] samling;
-	private int antall;
 
 //	Oppretter en tom Kortsamling med plass til MAKS_KORT (hele kortstokken).
 	
@@ -43,9 +42,7 @@ public class KortSamling {
 	
 	public int getAntalKort() {
 		
-		antall = samling.length;
-		
-		return antall;
+		return samling.length;
 		
 	}
 	
@@ -89,8 +86,12 @@ public class KortSamling {
 	 */
 	public void fjernAlle() {
 		
-		for(int i = 0; i < samling.length; i++)
-		    samling[i] = null;
+		//for(int i = 0; i < samling.length; i++)
+		  //  samling[i] = null;
+	
+	
+		
+	
 	}
 	
 	/**
@@ -129,26 +130,24 @@ public class KortSamling {
 	
 	public boolean har(Kort kort) {
 		
-		boolean harKort = false;
 		for (int i = 0; i<samling.length; i++) {
-			if (samling[i] == kort) {
-				harKort = true;
+			if (samling[i] = kort) {
+				return true;
 			}
 		}
-		return harKort;
+		return false;
 		
 	}
 			 
 	public boolean fjern(Kort kort) {
 		
-		boolean fjernet = false;
 		for (int i = 0; i<samling.length; i++) {
-			if (samling[i] == kort) {
+			if (samling[i] = kort) {
 				samling[i] = null;
-				fjernet = true;
+				return true;
 			}
 		}
-		return fjernet;
+		return false;
 	}
 
 	/**
