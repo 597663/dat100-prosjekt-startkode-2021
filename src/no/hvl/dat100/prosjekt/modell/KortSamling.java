@@ -24,12 +24,6 @@ public class KortSamling {
 	
 	public int getAntalKort() {
 		
-		antall = 0;
-		for (int i = 0; i<samling.length; i++) {
-			if(samling[i] != null) {
-				antall++;
-			}
-		}
 		return antall;
 		
 	}
