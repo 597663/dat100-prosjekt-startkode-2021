@@ -128,9 +128,10 @@ public class KortSamling {
 		
 		int k = 0;
 		for (int j = 0; j<samling.length; j++) {
-			if(samling[j] != null)
-				samling[j] = alleKort[k];
+			if(samling[j] != null) {
+				alleKort[k] = samling[j];
 				k++;
+			}
 		}
 		return alleKort;
 	}	
