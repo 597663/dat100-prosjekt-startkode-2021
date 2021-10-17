@@ -37,12 +37,7 @@ public class KortSamling {
 	
 	public boolean erTom() {
 		
-		for (int i = 0; i<samling.length; i++) {
-			if (samling[i] != null) {
-				return false;
-			}
-		}
-		return true;
+		return antall == 0;
 	}
 
 	public void leggTil(Kort kort) {
@@ -53,6 +48,7 @@ public class KortSamling {
 		for(int i = 0; i < samling.length; i++)
 			if(samling[i] == null) {
 				samling[i] = kort;
+				antall++;
 				return;
 		    }
 	
@@ -65,12 +61,14 @@ public class KortSamling {
 			samling[i+Regler.MAKS_KORT_FARGE] = new Kort(Kortfarge.Hjerter, i+1);
 			samling[i+2*Regler.MAKS_KORT_FARGE] = new Kort(Kortfarge.Ruter, i+1);
 			samling[i+3*Regler.MAKS_KORT_FARGE] = new Kort(Kortfarge.Spar, i+1);
+			antall = 52;
 			}
 		}
 
 	public void fjernAlle() {
 		
 		samling = new Kort[MAKS_KORT];
+		antall = 0;
 		
 	
 	}
@@ -91,6 +89,7 @@ public class KortSamling {
 			if(samling[i] != null){
 				final Kort siste = samling[i];
 				samling[i] = null;
+				antall--;
 				return siste;
 			}		
 		}
@@ -134,7 +133,7 @@ public class KortSamling {
 				}
 		}
 				
-		final Kort [] alleKort = new Kort[lengde];
+		final Kort [] alleKort = new Kort[antall];
 		
 		int k = 0;
 		for (int j = 0; j<samling.length; j++) {
