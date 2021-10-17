@@ -3,10 +3,6 @@ package no.hvl.dat100.prosjekt.modell;
 import no.hvl.dat100.prosjekt.TODO;
 import no.hvl.dat100.prosjekt.kontroll.dommer.Regler;
 
-// Ser du dette Olav?
-//Ja
-//Test
-
 
 /**
  * Struktur for å lagre ei samling kort. Kan lagre hele kortstokken. Det finnes
@@ -64,19 +60,14 @@ public class KortSamling {
 		return tom;
 	}
 
-	/**
-	 * Legg et kort til samlinga.
-	 * 
-	 * @param kort
-	 *            er kortet som skal leggast til.
-	 */
 	public void leggTil(Kort kort) {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
-		
+		for(int i = 0; i < samling.length; i++)
+		    if(samling[i] == null) {
+		        samling[i] = kort;
+		        break;
+		    }
+	
 	}
 	
 	/**
@@ -84,23 +75,22 @@ public class KortSamling {
 	 * slik at de normalt må stokkes før bruk.
 	 */
 	public void leggTilAlle() {
-		
-		// TODO - START
-		// Husk: bruk Regler.MAKS_KORT_FARGE for å få antall kort per farge
-		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
-	}
+	
+		for(int i = 0 ; i < Regler.MAKS_KORT_FARGE; i++) {
+			samling[i] = new Kort(Kortfarge.Klover, i+1);
+			samling[i+Regler.MAKS_KORT_FARGE] = new Kort(Kortfarge.Hjerter, i+1);
+			samling[i+2*Regler.MAKS_KORT_FARGE] = new Kort(Kortfarge.Ruter, i+1);
+			samling[i+3*Regler.MAKS_KORT_FARGE] = new Kort(Kortfarge.Spar, i+1);
+		}
+		}
 
 	/**
 	 * Fjerner alle korta fra samlinga slik at den blir tom.
 	 */
 	public void fjernAlle() {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
+		for(int i = 0; i < samling.length; i++)
+		    samling[i] = null;
 	}
 	
 	/**
@@ -110,6 +100,9 @@ public class KortSamling {
 	 *         null.
 	 */
 	public Kort seSiste() {
+		
+		
+		
 		
 		// TODO - START
 		
@@ -134,40 +127,28 @@ public class KortSamling {
 		// TODO - END
 	}
 	
-	/**
-	 * Undersøker om et kort finst i samlinga.
-	 * 
-	 * @param kort.
-	 * 
-	 * @return true om kortet finst i samlinga, false ellers.
-	 */
 	public boolean har(Kort kort) {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		// return false;
-		// TODO - END
+		boolean harKort = false;
+		for (int i = 0; i<samling.length; i++) {
+			if (samling[i] == kort) {
+				harKort = true;
+			}
+		}
+		return harKort;
 		
 	}
-
-	/**
-	 * Fjernar et kort frå samlinga. Dersom kortet ikke finnest i samlinga,
-	 * skjer ingenting med samilingen
-	 * 
-	 * @param kort
-	 *            kortet som skal fjernast. Dersom kortet ikke finnes, skjer
-	 *            ingenting.
-	 * @return true om kortet blev fjernet fra samlinga, false ellers.
-	 */
 			 
 	public boolean fjern(Kort kort) {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - END
+		boolean fjernet = false;
+		for (int i = 0; i<samling.length; i++) {
+			if (samling[i] == kort) {
+				samling[i] = null;
+				fjernet = true;
+			}
+		}
+		return fjernet;
 	}
 
 	/**
