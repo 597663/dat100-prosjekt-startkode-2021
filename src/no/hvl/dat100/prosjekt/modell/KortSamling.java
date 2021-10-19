@@ -19,7 +19,6 @@ public class KortSamling {
 	public Kort[] getSamling() {
 		
 		return samling;
-		
 	}
 	
 	public int getAntalKort() {
@@ -44,7 +43,6 @@ public class KortSamling {
 				antall++;
 				return;
 		    }
-		
 	}
 	
 	public void leggTilAlle() {
