@@ -83,7 +83,7 @@ public class KortUtils {
 		
 		int i = 0;
 		do {
-			int randomIndex = rand.nextInt(52 + 0) + 0;
+			int randomIndex = rand.nextInt(lengde + 0) + 0;
 				if(uStokket[randomIndex] != null) {
 					tmpSamling[i] = uStokket[randomIndex];
 					i++;
@@ -92,7 +92,7 @@ public class KortUtils {
 		
 		samling.fjernAlle();
 		int j;
-		for(j=0; j< lengde; j++) {
+		for(j = 0; j < lengde; j++) {
 			samling.leggTil(tmpSamling[j]);	}
 	}
 }
