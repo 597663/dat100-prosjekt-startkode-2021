@@ -67,7 +67,6 @@ public class KortUtils {
 			samling.leggTil(kort);
 	}
 		
-//	 Arrays.sort(samling);
 	/**
 	 * Stokkar en kortsamling. 
 	 * 
@@ -76,10 +75,24 @@ public class KortUtils {
 	 */
 	public static void stokk(KortSamling samling) {
 		
-		// TODO - START
+		Random rand = new Random();
 		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
+		Kort [] uStokket = samling.getSamling();
+		Kort [] tmpSamling = new Kort[uStokket.length];
+		int lengde = samling.getAntalKort();
+		
+		int i = 0;
+		do {
+			int randomIndex = rand.nextInt(lengde + 0) + 0;
+				if(uStokket[randomIndex] != null) {
+					tmpSamling[i] = uStokket[randomIndex];
+					i++;
+				}
+		} while (i>lengde);
+		
+		samling.fjernAlle();
+		int j;
+		for(j = 0; j < lengde; j++) {
+			samling.leggTil(tmpSamling[j]);	}
 	}
-	
 }
