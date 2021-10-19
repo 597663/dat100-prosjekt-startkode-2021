@@ -49,19 +49,13 @@ public class KortSamling {
 	
 	public void leggTilAlle() {
 	
-		for(int i = 0 ; i < Regler.MAKS_KORT_FARGE; i++) {
-			samling[i] = new Kort(Kortfarge.Klover, i+1);
-			samling[i+Regler.MAKS_KORT_FARGE] = new Kort(Kortfarge.Hjerter, i+1);
-			samling[i+2*Regler.MAKS_KORT_FARGE] = new Kort(Kortfarge.Ruter, i+1);
-			samling[i+3*Regler.MAKS_KORT_FARGE] = new Kort(Kortfarge.Spar, i+1);
+		for (Kortfarge kortfarge : Kortfarge.values()) {
+			for (int i = 1; i <= Regler.MAKS_KORT_FARGE ; i++) {
+				leggTil(new Kort(kortfarge, i));
 			}
-		
-		for(int j = 0 ; j < MAKS_KORT; j++) {
-			System.out.println(samling[j]);
 		}
-		antall = 52;
-		}
-
+	}
+	
 	public void fjernAlle() {
 		
 		samling = new Kort[MAKS_KORT];

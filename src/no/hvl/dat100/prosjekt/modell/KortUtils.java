@@ -1,8 +1,10 @@
 package no.hvl.dat100.prosjekt.modell;
 
 import java.util.Random;
+import java.util.Arrays;
 
 import no.hvl.dat100.prosjekt.TODO;
+
 
 public class KortUtils {
 
@@ -16,13 +18,10 @@ public class KortUtils {
 	 */
 	
 	public static void sorter(KortSamling samling) {
+
+}
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
-	}
-	
+//	 Arrays.sort(samling);
 	/**
 	 * Stokkar en kortsamling. 
 	 * 
