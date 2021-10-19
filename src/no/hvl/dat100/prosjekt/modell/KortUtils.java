@@ -19,8 +19,16 @@ public class KortUtils {
 	
 	public static void sorter(KortSamling samling) {
 
-		for (Kort k : samling){
 
+		Kort[] bunke = samling.getAllekort();
+
+		for (int i = 0; i < samling.getAntalKort(); i++){
+			boolean likFarge = false;
+			if (bunke[i].sammeFarge(bunke[i+1])){
+				bunke[i].compareTo(bunke[samling.getAntalKort()]);
+
+
+			}
 		}
 	}
 		
