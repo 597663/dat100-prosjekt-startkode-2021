@@ -25,11 +25,17 @@ public class Bord {
 	 * Alle kortene legges til fra-bunken. 
 	 */
 	public Bord() {
-		
-		// TODO - START
-		
+
+		try{
+			bunkeTil.fjernAlle();
+			bunkeFra.leggTilAlle();
+		} catch(NullPointerException e) {
+			e.printStackTrace();
+		}
+
+
 		throw new UnsupportedOperationException(TODO.constructor("Bord"));
-		// TODO - END
+
 	}
 	
 	/**
@@ -40,7 +46,6 @@ public class Bord {
 	public KortSamling getBunkeTil() {
 		
 		return bunkeTil;
-		
 	}
 
 	/**
@@ -51,7 +56,6 @@ public class Bord {
 	public KortSamling getBunkeFra() {
 		
 		return bunkeFra;
-		
 	}
 	
 	/**
@@ -60,12 +64,9 @@ public class Bord {
 	 * @return true om til-bunken er tom, false ellers.
 	 */
 	public boolean bunketilTom() {
-		
-		// TODO - START
-				
-		throw new UnsupportedOperationException(TODO.method());
 
-		// TODO - END
+
+		return bunkeTil.erTom();
 	}
 
 	/**
@@ -74,13 +75,9 @@ public class Bord {
 	 * @return true om fra-bunken er tom, false ellers.
 	 */
 	public boolean bunkefraTom() {
-		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-	
-		// TODO - END
-		
+
+
+		return bunkeFra.erTom();
 	}
 	
 	/**
@@ -89,12 +86,9 @@ public class Bord {
 	 * @return antall kort i fra-bunken.
 	 */
 	public int antallBunkeFra() {
-		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
 
-		// TODO - END
+
+		return bunkeFra.getAntalKort();
 	}
 
 	/**
@@ -104,11 +98,8 @@ public class Bord {
 	 */
 	public int antallBunkeTil() {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
 
-		// TODO - END
+		return bunkeTil.getAntalKort();
 	}
 	
 	/**
@@ -116,12 +107,9 @@ public class Bord {
 	 * billedsiden opp, men det trenger ikke gruppen tenke på).
 	 */
 	public void vendOversteFraBunke() {
-		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
-		
+
+
+		bunkeTil.leggTil(bunkeFra.taSiste());
 	}
 		
 	/**
@@ -132,11 +120,8 @@ public class Bord {
 	
 	public Kort taOversteFraBunke() {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
 
-		// TODO - END
+		return bunkeFra.taSiste();
 	}
 	
 	/**
@@ -146,12 +131,8 @@ public class Bord {
 	 * @return peker/referanse til øverste kortet i til-bunken.
 	 */
 	public Kort seOversteBunkeTil() {
-		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
 
-		// TODO - END
+		return bunkeTil.seSiste();
 	}
 	
 	/**
@@ -162,10 +143,14 @@ public class Bord {
 	 */
 	public void snuTilBunken() {
 
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
+		Kort temp = bunkeTil.taSiste();
+		Kort[] bunke = bunkeTil.getAllekort();
+		for (Kort kort : bunke){
+			bunkeFra.leggTil(kort);
+		}
+		bunkeTil.fjernAlle();
+		bunkeTil.leggTil(temp);
+		KortUtils.stokk(bunkeFra);
 	}
 		
 	/**
@@ -176,11 +161,8 @@ public class Bord {
 	 * 	
 	 */
 	public void leggNedBunkeTil(Kort k) {
-		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
+
+		bunkeTil.leggTil(k);
 				
 	}
 }
