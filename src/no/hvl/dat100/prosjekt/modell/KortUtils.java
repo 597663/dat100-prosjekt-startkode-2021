@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 import no.hvl.dat100.prosjekt.TODO;
 
+
 public class KortUtils {
 
 	/**
@@ -17,10 +18,10 @@ public class KortUtils {
 	 */
 	
 	public static void sorter(KortSamling samling) {
+
+}
 		
-		//Arrays.sort(Kort [] samling);
-	}
-	
+//	 Arrays.sort(samling);
 	/**
 	 * Stokkar en kortsamling. 
 	 * 
