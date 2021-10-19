@@ -61,6 +61,7 @@ public class SydSpiller extends Spiller {
 		if (!attere.erTom()) {
 			spillFra += attere.getAllekort();
 		}
+		
 
 		Handling handling = null;
 		if (spillFra != null) {
