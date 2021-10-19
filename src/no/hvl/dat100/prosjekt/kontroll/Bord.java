@@ -34,7 +34,7 @@ public class Bord {
 		}
 
 
-		throw new UnsupportedOperationException(TODO.constructor("Bord"));
+		//throw new UnsupportedOperationException(TODO.constructor("Bord"));
 
 	}
 	

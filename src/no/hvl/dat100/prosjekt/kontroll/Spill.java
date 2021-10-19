@@ -41,12 +41,9 @@ public class Spill {
 	 * @return referanse/peker bord objekt.
 	 */
 	public Bord getBord() {
-		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
 
-		// TODO - END
+
+		return bord;
 		
 	}
 	
@@ -56,13 +53,9 @@ public class Spill {
 	 * @return referanse/peker til syd spiller.
 	 */
 	public ISpiller getSyd() {
-		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
 
-		// TODO - END
-		
+
+		return syd;
 	}
 
 	/**
@@ -72,11 +65,8 @@ public class Spill {
 	 */
 	public ISpiller getNord() {
 		
-		// TODO - START
 
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - END
+		return nord;
 	}
 
 	/**
@@ -91,7 +81,12 @@ public class Spill {
 	public void start() {
 		
 		// TODO - START
-		
+		bord = new Bord();
+
+		KortUtils.stokk(bord.getBunkeFra());
+		nord.getHand();
+
+
 		throw new UnsupportedOperationException(TODO.method());
 		// TODO - END
 	}
