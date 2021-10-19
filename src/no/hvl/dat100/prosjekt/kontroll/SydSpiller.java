@@ -54,6 +54,15 @@ public class SydSpiller extends Spiller {
 		}
 		Kort spill = null;
 		Kort[] spillFra = null;
+		if (!lovlige.erTom() || !attere.erTom()) {
+			int spillFralengde = lovlige.getAllekort().length + attere.getAllekort().length;
+			for (int i=0; i<lovlige.getAllekort().length; i++) {
+				spillFra[i] = lovlige.getAllekort()[i];
+			}
+			for (int j=0; j<attere.getAllekort().length; j++) {
+				spillFra[lovlige.getAllekort().length+j]=attere.getAllekort()[j];
+			}
+		}
 
 		if (!lovlige.erTom()) {
 			spillFra += lovlige.getAllekort();
@@ -61,7 +70,6 @@ public class SydSpiller extends Spiller {
 		if (!attere.erTom()) {
 			spillFra += attere.getAllekort();
 		}
-		
 
 		Handling handling = null;
 		if (spillFra != null) {
