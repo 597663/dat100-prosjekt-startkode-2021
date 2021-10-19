@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 import no.hvl.dat100.prosjekt.TODO;
 
+
 public class KortUtils {
 
 	/**
@@ -12,32 +13,30 @@ public class KortUtils {
 	 * 
 	 * @see Kort
 	 * 
-	 * @param samling samling av kort som skal sorteres.
+	 * @param samling
+	 * 			samling av kort som skal sorteres. 
 	 */
-
+	
 	public static void sorter(KortSamling samling) {
 
-	}
+		for (Kort k : samling){
 
+		}
+	}
+		
 //	 Arrays.sort(samling);
 	/**
-	 * Stokkar en kortsamling.
+	 * Stokkar en kortsamling. 
 	 * 
-	 * @param samling samling av kort som skal stokkes.
+	 * @param samling
+	 * 			samling av kort som skal stokkes. 
 	 */
 	public static void stokk(KortSamling samling) {
-
-		Random rand = new Random();
-
-		for (int i = 0; i < samling.length; i++) {
-			int randomIndexToSwap = rand.nextInt(samling.length);
-			int temp = samling[randomIndexToSwap];
-			samling[randomIndexToSwap] = samling[i];
-			samling[i] = temp;
-		}
-		return samling;
-
+		
+		// TODO - START
+		
+		throw new UnsupportedOperationException(TODO.method());
 		// TODO - END
 	}
-
+	
 }
