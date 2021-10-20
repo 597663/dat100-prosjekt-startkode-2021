@@ -108,7 +108,6 @@ public class KortUtils {
 			samling.leggTil(tmpSamling[j]);	}
 		
 		
-		
 		System.out.print("[");
 
 		for (Kort tall : tmpSamling) {
