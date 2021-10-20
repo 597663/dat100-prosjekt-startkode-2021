@@ -81,6 +81,8 @@ public class KortUtils {
 		Kort [] tmpSamling = new Kort[uStokket.length];
 		int lengde = samling.getAntalKort();
 		
+		
+		
 		System.out.print("[");
 
 		for (Kort tall : uStokket) {
@@ -104,6 +106,8 @@ public class KortUtils {
 		int j;
 		for(j = 0; j < lengde; j++) {
 			samling.leggTil(tmpSamling[j]);	}
+		
+		
 		
 		System.out.print("[");
 
