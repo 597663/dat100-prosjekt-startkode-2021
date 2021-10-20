@@ -106,8 +106,7 @@ public class KortUtils {
 		
 		samling.fjernAlle();
 		
-		int j;
-		for(j = 0; j < lengde; j++) {
+		for(int j = 0; j < lengde; j++) {
 			samling.leggTil(tmpSamling[j]);	}
 		
 		
