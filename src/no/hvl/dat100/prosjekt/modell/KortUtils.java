@@ -81,28 +81,19 @@ public class KortUtils {
 		Kort [] tmpSamling = new Kort[uStokket.length];
 		int lengde = samling.getAntalKort();
 		
-		
-		
-		System.out.print("[");
-
-		for (Kort tall : uStokket) {
-
-			System.out.print(tall + " ");
+		if(lengde == 0) {
+			return;
 		}
-
-		System.out.println("]");
-
 		
 		int i = 0;
 		do {
 			int randomIndex = rand.nextInt(lengde);
-				if(uStokket[randomIndex] != null) {
-					tmpSamling[i] = uStokket[randomIndex];
-					uStokket[randomIndex] = null;
-					
-					i++;
+			if(uStokket[randomIndex] != null) {
+				tmpSamling[i] = uStokket[randomIndex];
+				uStokket[randomIndex] = null;	
+				i++;
 				}
-		} while (i < lengde);
+		} while (i < lengde );
 		
 		samling.fjernAlle();
 		
@@ -110,14 +101,6 @@ public class KortUtils {
 			samling.leggTil(tmpSamling[j]);	}
 		
 		
-		
-		System.out.print("[");
-
-		for (Kort tall : tmpSamling) {
-
-			System.out.print(tall + " ");
-		}
-
-		System.out.println("]");
 	}
 }
+
