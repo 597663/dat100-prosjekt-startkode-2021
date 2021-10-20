@@ -75,24 +75,43 @@ public class KortUtils {
 	 */
 	public static void stokk(KortSamling samling) {
 		
-		Random rand = new Random();
+		Random rand = new Random(System.currentTimeMillis());
 		
 		Kort [] uStokket = samling.getSamling();
 		Kort [] tmpSamling = new Kort[uStokket.length];
 		int lengde = samling.getAntalKort();
 		
+		System.out.print("[");
+
+		for (Kort tall : uStokket) {
+
+			System.out.print(tall + " ");
+		}
+
+		System.out.println("]");
+
+		
 		int i = 0;
 		do {
-			int randomIndex = rand.nextInt(lengde + 0) + 0;
+			int randomIndex = rand.nextInt(lengde);
 				if(uStokket[randomIndex] != null) {
 					tmpSamling[i] = uStokket[randomIndex];
+					uStokket[randomIndex] = null;
 					i++;
 				}
-		} while (i>lengde);
+		} while (i < lengde);
 		
-		samling.fjernAlle();
 		int j;
 		for(j = 0; j < lengde; j++) {
 			samling.leggTil(tmpSamling[j]);	}
+		
+		System.out.print("[");
+
+		for (Kort tall : tmpSamling) {
+
+			System.out.print(tall + " ");
+		}
+
+		System.out.println("]");
 	}
 }
