@@ -99,6 +99,6 @@ public class KortUtils {
 
 		for (int j = 0; j < lengde; j++) {
 			samling.leggTil(tmpSamling[j]);
-			}
 		}
 	}
+}
