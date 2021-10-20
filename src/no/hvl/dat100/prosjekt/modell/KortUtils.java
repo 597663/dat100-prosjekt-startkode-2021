@@ -99,9 +99,12 @@ public class KortUtils {
 				if(uStokket[randomIndex] != null) {
 					tmpSamling[i] = uStokket[randomIndex];
 					uStokket[randomIndex] = null;
+					
 					i++;
 				}
 		} while (i < lengde);
+		
+		samling.fjernAlle();
 		
 		int j;
 		for(j = 0; j < lengde; j++) {
