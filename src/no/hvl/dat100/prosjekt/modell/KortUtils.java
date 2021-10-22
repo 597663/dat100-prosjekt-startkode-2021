@@ -23,6 +23,7 @@ public class KortUtils {
 
 		Random rand = new Random(System.currentTimeMillis());
 
+		sorter(samling);
 		Kort[] uStokket = samling.getSamling();
 		Kort[] tmpSamling = new Kort[uStokket.length];
 		int lengde = samling.getAntalKort();
