@@ -13,7 +13,7 @@ public class KortUtils {
 		Arrays.sort(bunke);
 
 		samling.fjernAlle();
-		
+
 		for (int i = 0; i < bunke.length; i++) {
 			samling.leggTil(bunke[i]);
 		}
